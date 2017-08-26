@@ -1,4 +1,4 @@
-wtf.ui.Loader = function WtfUiLoader( $wrapper ) {
+wtf.ui.Loader = function WtfUiLoader ( $wrapper ) {
 	// Mixin constructors
 	OO.EventEmitter.call( this );
 
