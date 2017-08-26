@@ -1,0 +1,86 @@
+html,
+body {
+	height: 100vh;
+}
+
+body {
+	color: #fff;
+	text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+	background-color: #63265e;
+	font-size: 18px;
+
+	width: 100%;
+	height: 100%; /* For at least Firefox */
+	min-height: 100%;
+	-webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+		box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+	// overflow: hidden;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+p {
+	margin-bottom: 0.5em;
+}
+
+a {
+	color: #fff;
+	font-weight: bold;
+
+	&:hover {
+		color: #ffb0f9;
+		text-decoration: none;
+	}
+}
+
+.neutralitywtf {
+	&-table {
+		display: table;
+	}
+
+	&-row {
+		display: table-row;
+	}
+
+	&-cell {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&-spinner {
+		width: 100%;
+		display: none;
+		text-align: center;
+		margin-top: 1em;
+		font-size: 5em;
+
+		&-image {
+			width: 200px;
+			height: 200px;
+			background-image: url( images/infinity.svg );
+			background-repeat: no-repeat;
+			margin: 0 auto;
+
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				// IE10+ CSS rules
+				background-image: url( images/infinity.gif );
+			}
+		}
+
+		.neutralitywtf-loading & {
+			display: block;
+		}
+
+		.neutralitywtf-loaded & {
+			display: none;
+		}
+	}
+}
+
+@import 'neutrality.wtf.variables.less';
+@import 'neutrality.wtf.wrapper.less';
+@import 'neutrality.wtf.topbar.less';
+@import 'neutrality.wtf.search.less';
+@import 'neutrality.wtf.display.less';

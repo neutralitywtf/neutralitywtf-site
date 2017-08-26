@@ -1,0 +1,22 @@
+.neutralitywtf-wrapper {
+	width: @page-width-standard;
+	margin: 0 auto;
+
+	@media (min-width: @page-width-medium) and (max-width: @page-width-standard) {
+		width: @page-width-medium;
+		font-size: 0.8em;
+		padding: 0.2em;
+	}
+
+	@media (min-width: @page-width-small) and (max-width: @page-width-medium) {
+		width: 100%;
+		font-size: 0.7em;
+		padding: 0.2em;
+	}
+
+	@media (max-width: @page-width-small) {
+		width: @page-width-small;
+		font-size: 0.5em;
+	}
+}
+

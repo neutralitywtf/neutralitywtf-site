@@ -1,0 +1,93 @@
+.neutralitywtf-topbar {
+	font-family: 'Bree Serif', serif;
+	width: 100%;
+
+	.neutralitywtf-loading & {
+		opacity: 0.5;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	&-logo {
+		white-space: nowrap;
+		font-size: 2em;
+	}
+
+	&-menu {
+		white-space: nowrap;
+		font-size: 1.4em;
+		width: 1em;
+
+		li {
+			margin: 0 0.5em 0 0.5em;
+			opacity: 0.5;
+
+			&:hover ~ hr,
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		hr {
+			height: .25rem;
+			width: ~'calc( 50% - 0.2em )'; /* 50% minus a padding to either side */
+			margin: 0;
+			background: #fff;
+			border: none;
+			opacity: 0.5;
+			transition: .3s ease-in-out;
+		}
+
+		&-item {
+			// The 'active' rule must have less specificity than the hover
+			// so that hovering overrides the definition
+			&-main.neutralitywtf-topbar-menu-active ~ hr,
+			li&-main:hover ~ hr {
+				margin-left: 0;
+			}
+
+			&-about.neutralitywtf-topbar-menu-active ~ hr,
+			li&-about:hover ~ hr {
+				margin-left: 50%;
+			}
+		}
+	}
+
+	&-middle {
+		width: 100%;
+		text-align: center;
+
+		&-menu {
+			visibility: hidden;
+			opacity: 0;
+			transition: visibility 0s,
+				opacity 0.5s linear;
+
+			.neutralitywtf-loaded & {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		li {
+			font-size: 0.8em;
+			&:not(:first-child) {
+				margin-left: 2em;
+
+			}
+			@media (max-width: @page-width-medium) {
+				display: block;
+				&:not(:first-child) {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

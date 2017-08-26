@@ -1,0 +1,16 @@
+{
+  "name": "neutrality.wtf",
+  "private": true,
+  "description": "Front-end for neutrality.wtf website",
+  "version": "0.0.1",
+  "license": "GPLv3.0+",
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-contrib-concat": "1.0.0",
+    "grunt-contrib-csslint": "1.0.0",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-less": "*",
+    "grunt-jscs": "2.8.0",
+    "oojs": "^2.1.0"
+ }
+}

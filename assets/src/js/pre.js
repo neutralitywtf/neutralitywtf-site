@@ -1,0 +1,3 @@
+window.neutralitywtf = {};
+
+( function ( $, wtf ) {

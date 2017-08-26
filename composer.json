@@ -1,0 +1,10 @@
+{
+	"name"       : "neutrality.wtf",
+	"description": "Site to check the neutrality of text online",
+	"type"       : "",
+	"license"    : "GPL-3.0+",
+	"require": {
+		"twbs/bootstrap": "4.0.0-beta",
+		"phpFastCache/phpFastCache": "^6.0"
+	}
+}
