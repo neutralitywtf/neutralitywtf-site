@@ -40,7 +40,7 @@ if ( $url ) {
 
 	// try to get from Cache first.
 	$resultsItem = $cache->getItem( $keywordWebpage );
-var_dump( $resultsItem->isHit() );
+
 	if ( !$resultsItem->isHit() ) {
 		$api = new ConceptReplacer\API(
 			$url,
