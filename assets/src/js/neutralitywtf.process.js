@@ -18,7 +18,7 @@ wtf.process = {
 				// TODO: Mobile compatibility is coming, but for the moment
 				// the ConceptReplacer library seems to not handle it
 				// that well. Commenting this part out for now.
-				mobile: false // Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
+				mobile: 0 // Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
 			}
 		} ).then(
 			function ( data ) {
