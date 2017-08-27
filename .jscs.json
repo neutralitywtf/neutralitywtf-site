@@ -1,4 +1,8 @@
 {
+  "excludeFiles": [
+    "assets/src/js/pre.js",
+    "assets/src/js/post.js"
+  ],
   "requireCurlyBraces": [
     "if",
     "else",
@@ -32,7 +36,7 @@
   },
   "requireBlocksOnNewline": true,
   "disallowEmptyBlocks": true,
-  "disallowSpacesInsideObjectBrackets": true,
+  "disallowSpacesInsideObjectBrackets": false,
   "disallowSpacesInsideArrayBrackets": true,
   "disallowSpaceAfterObjectKeys": true,
   "requireCommaBeforeLineBreak": true,
