@@ -25,6 +25,11 @@ $url = urldecode( html_entity_decode( filter_var( safeGet( 'url' ), FILTER_SANIT
 // Remove &#xx entities
 // See http://www.php.net/manual/en/function.html-entity-decode.php
 $url = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $url);
+if ( !filter_var( $url, FILTER_VALIDATE_URL ) ) {
+	echo 'ERROR: Bad URL given.';
+	die();
+}
+
 
 $module = filter_var( safeGet( 'module', 'swapgender' ), FILTER_SANITIZE_STRING );
 $localize = (bool)safeGet( 'localize' );
