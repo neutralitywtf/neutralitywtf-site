@@ -15,9 +15,10 @@ wtf.process = {
 			data: {
 				localize: 1,
 				url: url,
-				// If the view is smaller than the threshhold,
-				// we will request a mobile website
-				mobile: Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
+				// There are still issues with requesting mobile sites
+				// so while they're being resolved, we will always ask
+				// for the regular desktop site.
+				mobile: 0 // Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
 			}
 		} ).then(
 			function ( data ) {
