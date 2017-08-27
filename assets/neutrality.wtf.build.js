@@ -31,10 +31,9 @@ wtf.process = {
 			data: {
 				localize: 1,
 				url: url,
-				// There are still issues with requesting mobile sites
-				// so while they're being resolved, we will always ask
-				// for the regular desktop site.
-				mobile: 0 // Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
+				// Conditionally request a mobile site if the
+				// width of the page is below the mobile threshhold
+				mobile: Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
 			}
 		} ).then(
 			function ( data ) {
@@ -257,6 +256,9 @@ $( document ).ready( function () {
 	// Load examples
 	$( '.neutralitywtf-search-examples ul li a' ).on( 'click', function () {
 		var url = $( this ).data( 'url' );
+
+		$( '.neutralitywtf-topbar-middle-menu #view-original' )
+			.prop( 'href', url );
 
 		search.setValue( url );
 		search.submit();

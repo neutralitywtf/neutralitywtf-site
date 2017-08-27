@@ -42,7 +42,7 @@ $( document ).ready( function () {
 	$( '.neutralitywtf-search-examples ul li a' ).on( 'click', function () {
 		var url = $( this ).data( 'url' );
 
-		$( '.neutralitywtf-topbar-middle-menu #view-original a' )
+		$( '.neutralitywtf-topbar-middle-menu #view-original' )
 			.prop( 'href', url );
 
 		search.setValue( url );
