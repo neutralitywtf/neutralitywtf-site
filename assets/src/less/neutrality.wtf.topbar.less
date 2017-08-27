@@ -18,6 +18,12 @@
 	&-logo {
 		white-space: nowrap;
 		font-size: 2em;
+
+		@media (max-width: @page-width-small) {
+			white-space: normal;
+			text-align: center;
+			line-height: 1;
+		}
 	}
 
 	&-menu {
@@ -82,11 +88,9 @@
 				margin-left: 2em;
 
 			}
-			@media (max-width: @page-width-medium) {
-				display: block;
-				&:not(:first-child) {
-					margin-left: 0;
-				}
+
+			@media (max-width: @page-width-small) {
+				font-size: 1.5em;
 			}
 		}
 	}

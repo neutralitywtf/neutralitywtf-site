@@ -3,8 +3,16 @@
 	margin: 5em auto 0 auto;
 
 	.neutralitywtf-loading & {
-		opacity: 0.5;
+		pointer-events: none;
+
+		&-info,
+		&-input,
+		&-examples,
+		&-alert {
+			opacity: 0.5;
+		}
 	}
+
 
 	&-info {
 		line-height: 1.2;
@@ -40,6 +48,14 @@
 				text-align: center;
 				padding: 1em 0 0 0;
 				opacity: 0.6;
+				@media (max-width: @page-width-medium) {
+					font-size: 1.5em;
+					border-radius: 10px;
+					padding: 0.5em;
+					margin-bottom: 1em;
+					background-color: #E91E63;
+
+				}
 			}
 		}
 	}

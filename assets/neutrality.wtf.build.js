@@ -236,10 +236,30 @@ $( document ).ready( function () {
 			} );
 	} );
 
+	// Change the logo to fit small screens
+	$( window ).on( 'resize', adjustSmallScreen );
+	adjustSmallScreen();
+
 	if ( !!wtfdata.url ) {
 		// Data already exists, and the URL is in the input already.
 		// Run the load process
 		search.submit();
+	}
+
+	function adjustSmallScreen() {
+		var windowWidth = $( window ).width(),
+			isSmallWindow = windowWidth <= wtf.const.MOBILE_THRESHHOLD;
+
+		$( '.neutralitywtf-topbar-logo a' )
+			.text(
+				isSmallWindow ?
+					'Neutrality WTF' : 'Neutrality:WTF'
+			);
+
+		$( '.neutralitywtf-topbar-middle-menu #view-original' )
+			.text( '[ ' + ( isSmallWindow ? 'Original' : 'View original' ) + ' ]' );
+		$( '.neutralitywtf-topbar-middle-menu #try-again' )
+			.text( '[ ' + ( isSmallWindow ? 'Reset' : 'Try again' ) + ' ]' );
 	}
 } );
 
