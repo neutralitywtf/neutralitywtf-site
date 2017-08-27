@@ -27,8 +27,30 @@ $url = urldecode( html_entity_decode( filter_var( safeGet( 'url' ), FILTER_SANIT
 $url = preg_replace_callback("/(&#[0-9]+;)/", function($m) { return mb_convert_encoding($m[1], "UTF-8", "HTML-ENTITIES"); }, $url);
 
 $module = filter_var( safeGet( 'module', 'swapgender' ), FILTER_SANITIZE_STRING );
-$isMobile = (bool)filter_var( safeGet( 'mobile', false ), FILTER_SANITIZE_STRING );
 $localize = (bool)safeGet( 'localize' );
+
+$isMobile = (bool)filter_var( safeGet( 'mobile', false ), FILTER_SANITIZE_STRING );
+// Correct the mobile declaration if the requested URL is in the excluded list
+if ( $isMobile ) {
+	// Define sites we know are not being rendered properly when
+	// requested as mobile sites. This should be fixed more thoroughly,
+	// but for now, the exclusion will allow us to request mobile version
+	// when possible without breaking the behavior for sites that are
+	// known to fail on mobile view
+	$excludedFromMobile = [
+		'cnn.com'
+	];
+
+	$acceptMobile = true;
+	foreach ( $excludedFromMobile as $excludedDomain ) {
+		if ( ConceptReplacer\API::isInDomain( $excludedDomain, $url ) ) {
+			$acceptMobile = false;
+			break;
+		}
+	}
+
+	$isMobile = $acceptMobile;
+}
 
 if ( $url ) {
 	phpFastCache\CacheManager::setDefaultConfig( [
