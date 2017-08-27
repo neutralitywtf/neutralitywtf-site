@@ -31,6 +31,8 @@ wtf.process = {
 			data: {
 				localize: 1,
 				url: url,
+				// If the view is smaller than the threshhold,
+				// we will request a mobile website
 				mobile: Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
 			}
 		} ).then(
@@ -51,14 +53,16 @@ wtf.process = {
 			url: $( '<span>' ).html( url ).text()
 		};
 		window.history.pushState(
-			{ tag: 'neutralitywtf' },
+			{
+				tag: 'neutralitywtf'
+			},
 			document.title,
 			'?' + $.param( params )
 		);
 	}
 };
 
-wtf.ui.Loader = function WtfUiLoader( $wrapper ) {
+wtf.ui.Loader = function WtfUiLoader ( $wrapper ) {
 	// Mixin constructors
 	OO.EventEmitter.call( this );
 
@@ -103,7 +107,7 @@ wtf.ui.Loader.prototype.setState = function ( loadingState ) {
 	this.emit( 'stateChange', loadingState );
 };
 
-wtf.ui.SearchWidget = function WtfUiSearchWidget( $element, loader, config ) {
+wtf.ui.SearchWidget = function WtfUiSearchWidget ( $element, loader, config ) {
 	// Configuration initialization
 	config = config || {};
 
@@ -116,7 +120,8 @@ wtf.ui.SearchWidget = function WtfUiSearchWidget( $element, loader, config ) {
 
 	this.msgs = {
 		badUrl: '<strong>Can\'t do it!</strong> Please try again with a valid URL.',
-		problemFetching: '<strong>Oh noes!</strong> Couldn\'t load the site. Please try another URL, or try again later.'
+		problemFetching: '<strong>Oh noes!</strong>' +
+			' Couldn\'t load the site. Please try another URL, or try again later.'
 	};
 
 	this.$info = this.$element.find( '.neutralitywtf-search-info' );
@@ -129,7 +134,6 @@ wtf.ui.SearchWidget = function WtfUiSearchWidget( $element, loader, config ) {
 	this.$input.on( 'keypress', this.onInputKeypress.bind( this ) );
 
 	this.loader.connect( this, { stateChange: 'onLoaderStateChange' } );
-
 };
 
 OO.initClass( wtf.ui.SearchWidget );
@@ -202,9 +206,15 @@ wtf.ui.SearchWidget.prototype.setFailure = function ( failureMessage ) {
 };
 
 $( document ).ready( function () {
-	var loader = new wtf.ui.Loader( $( 'body' ) ),
-		search = new wtf.ui.SearchWidget( $( '.neutralitywtf-search' ), loader ),
+	var search,
+		loader = new wtf.ui.Loader( $( 'body' ) ),
+		search = new wtf.ui.SearchWidget(
+			$( '.neutralitywtf-search' ),
+			loader
+		),
 		$display = $( '.neutralitywtf-display' );
+
+	wtfdata = wtfdata || {};
 
 	search.on( 'fetch', function ( url ) {
 		loader.start();
@@ -224,6 +234,12 @@ $( document ).ready( function () {
 				loader.finish();
 			} );
 	} );
+
+	if ( !!wtfdata.url ) {
+		// Data already exists, and the URL is in the input already.
+		// Run the load process
+		search.submit();
+	}
 } );
 
 }( jQuery, neutralitywtf ) );

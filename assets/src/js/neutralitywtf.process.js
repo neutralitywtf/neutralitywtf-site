@@ -15,10 +15,9 @@ wtf.process = {
 			data: {
 				localize: 1,
 				url: url,
-				// TODO: Mobile compatibility is coming, but for the moment
-				// the ConceptReplacer library seems to not handle it
-				// that well. Commenting this part out for now.
-				mobile: 0 // Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
+				// If the view is smaller than the threshhold,
+				// we will request a mobile website
+				mobile: Number( $( window ).width() <= wtf.const.MOBILE_THRESHHOLD )
 			}
 		} ).then(
 			function ( data ) {

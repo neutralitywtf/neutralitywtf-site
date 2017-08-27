@@ -25,7 +25,6 @@ wtf.ui.SearchWidget = function WtfUiSearchWidget ( $element, loader, config ) {
 	this.$input.on( 'keypress', this.onInputKeypress.bind( this ) );
 
 	this.loader.connect( this, { stateChange: 'onLoaderStateChange' } );
-
 };
 
 OO.initClass( wtf.ui.SearchWidget );

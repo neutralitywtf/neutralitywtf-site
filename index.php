@@ -25,7 +25,7 @@ $module = 'swapgender'; // For the moment, that's the only module
 		<!-- Custom styles for this page -->
 		<link href="assets/neutrality.wtf.build.css" rel="stylesheet">
 <?php
-	echo "<script type='text/javascript'>var neutralitywtf=" .
+	echo "<script type='text/javascript'>var wtfdata=" .
 		json_encode( [ 'url' => $url, 'module' => $module ] ) .
 		'</script>';
 ?>
@@ -71,9 +71,21 @@ $module = 'swapgender'; // For the moment, that's the only module
 					</div>
 					<p><small>Test the neutrality of online text by typing a URL in the box above.</small></p>
 				</div>
+
+				<div class="neutralitywtf-spinner"><div class="neutralitywtf-spinner-image"></div></div>
+
+				<div class="neutralitywtf-search-examples">
+					<h1>Examples</h1>
+					<ul>
+						<li><a href="?url=https://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace (Wikipedia)</a></li>
+						<li><a href="?url=http://www.wikihow.com/Treat-Girls-and-Women">How to Treat Girls and Women (WikiHow)</a></li>
+						<li><a href="?url=https://en.wikipedia.org/wiki/Women's_empowerment">Women's empowerment (Wikipedia)</a></li>
+						<li><a href="?url=https://en.wikipedia.org/wiki/Men's_rights_movement">Men's rights movement (Wikipedia)</a></li>
+						<li><a href="?url=http://money.cnn.com/2017/08/21/news/economy/girls-who-code-saujani/index.html">Girls Who Code founder: Men build technologies to 'replace their mothers' (CNN)</a></li>
+					</ul>
+				</div>
 			</div>
 
-			<div class="neutralitywtf-spinner"><div class="neutralitywtf-spinner-image"></div></div>
 		</div>
 
 		<iframe class="neutralitywtf-display"></iframe>

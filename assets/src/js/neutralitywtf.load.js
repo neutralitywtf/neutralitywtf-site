@@ -1,7 +1,13 @@
 $( document ).ready( function () {
-	var loader = new wtf.ui.Loader( $( 'body' ) ),
-		search = new wtf.ui.SearchWidget( $( '.neutralitywtf-search' ), loader ),
+	var search,
+		loader = new wtf.ui.Loader( $( 'body' ) ),
+		search = new wtf.ui.SearchWidget(
+			$( '.neutralitywtf-search' ),
+			loader
+		),
 		$display = $( '.neutralitywtf-display' );
+
+	wtfdata = wtfdata || {};
 
 	search.on( 'fetch', function ( url ) {
 		loader.start();
@@ -21,4 +27,10 @@ $( document ).ready( function () {
 				loader.finish();
 			} );
 	} );
+
+	if ( !!wtfdata.url ) {
+		// Data already exists, and the URL is in the input already.
+		// Run the load process
+		search.submit();
+	}
 } );
