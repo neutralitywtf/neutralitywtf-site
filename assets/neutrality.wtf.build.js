@@ -164,6 +164,14 @@ wtf.ui.SearchWidget.prototype.onInputKeypress = function ( e ) {
 };
 
 /**
+ * Set the current value of the search to the given URL
+ *
+ * @param {string} url URL to set the value to
+ */
+wtf.ui.SearchWidget.prototype.setValue = function ( url ) {
+	this.$input.val( url );
+};
+/**
  * Check whether the given URL is valid
  *
  * @param {string} url Given url
@@ -207,8 +215,7 @@ wtf.ui.SearchWidget.prototype.setFailure = function ( failureMessage ) {
 };
 
 $( document ).ready( function () {
-	var search,
-		loader = new wtf.ui.Loader( $( 'body' ) ),
+	var loader = new wtf.ui.Loader( $( 'body' ) ),
 		search = new wtf.ui.SearchWidget(
 			$( '.neutralitywtf-search' ),
 			loader
@@ -240,11 +247,24 @@ $( document ).ready( function () {
 	$( window ).on( 'resize', adjustSmallScreen );
 	adjustSmallScreen();
 
+	// Load if needed
 	if ( !!wtfdata.url ) {
 		// Data already exists, and the URL is in the input already.
 		// Run the load process
 		search.submit();
 	}
+
+	// Load examples
+	$( '.neutralitywtf-search-examples ul li a' ).on( 'click', function () {
+		var url = $( this ).data( 'url' );
+
+		search.setValue( url );
+		search.submit();
+
+		return false;
+	} );
+
+	/** Functions */
 
 	function adjustSmallScreen() {
 		var windowWidth = $( window ).width(),

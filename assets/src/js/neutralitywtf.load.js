@@ -31,11 +31,27 @@ $( document ).ready( function () {
 	$( window ).on( 'resize', adjustSmallScreen );
 	adjustSmallScreen();
 
+	// Load if needed
 	if ( !!wtfdata.url ) {
 		// Data already exists, and the URL is in the input already.
 		// Run the load process
 		search.submit();
 	}
+
+	// Load examples
+	$( '.neutralitywtf-search-examples ul li a' ).on( 'click', function () {
+		var url = $( this ).data( 'url' );
+
+		$( '.neutralitywtf-topbar-middle-menu #view-original a' )
+			.prop( 'href', url );
+
+		search.setValue( url );
+		search.submit();
+
+		return false;
+	} );
+
+	/** Functions */
 
 	function adjustSmallScreen() {
 		var windowWidth = $( window ).width(),

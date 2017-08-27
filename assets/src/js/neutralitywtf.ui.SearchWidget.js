@@ -54,6 +54,14 @@ wtf.ui.SearchWidget.prototype.onInputKeypress = function ( e ) {
 };
 
 /**
+ * Set the current value of the search to the given URL
+ *
+ * @param {string} url URL to set the value to
+ */
+wtf.ui.SearchWidget.prototype.setValue = function ( url ) {
+	this.$input.val( url );
+};
+/**
  * Check whether the given URL is valid
  *
  * @param {string} url Given url
