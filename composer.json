@@ -5,6 +5,7 @@
 	"license"    : "GPL-3.0+",
 	"require": {
 		"twbs/bootstrap": "4.0.0-beta",
-		"phpFastCache/phpFastCache": "^6.0"
+		"phpFastCache/phpFastCache": "^6.0",
+		"eloquent/composer-npm-bridge": "^4"
 	}
 }
