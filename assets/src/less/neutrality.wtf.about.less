@@ -1,0 +1,59 @@
+.neutralitywtf-about {
+	margin: 0 auto;
+	width: 32em;
+
+	@media (min-width: @page-width-medium) and (max-width: @page-width-standard) {
+		font-size: 1/0.8em;
+	}
+
+	@media (min-width: @page-width-small) and (max-width: @page-width-medium) {
+		font-size: 1/0.7em;
+		width: 100%;
+	}
+
+	@media (max-width: @page-width-small) {
+		font-size: 1/0.5em;
+		width: 100%;
+	}
+
+	a {
+		border-bottom: 1px dashed #fff;
+	}
+
+	a:hover {
+		border-bottom: 1px solid #fff;
+	}
+
+	h1,
+	h2 {
+		font-family: 'Bree Serif', serif;
+		text-align: center;
+		margin: 1em 0;
+		color: #ff4d8a;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+
+	&-text {
+		&-logo {
+			font-family: 'Bree Serif', serif;
+		}
+
+		&-emphasis {
+			font-weight: bold;
+			font-size: 1.2em;
+			color: #ffc107;
+
+			p& {
+				text-align: center;
+				border-top: 1px solid #ffc107;
+				border-bottom: 1px solid #ffc107;
+			}
+		}
+	}
+}
