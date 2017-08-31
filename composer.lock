@@ -4,65 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bcfb8759435f138187bd9f9fb4f38fdf",
+    "content-hash": "26e7c811d7f039b7575b18a311d5c8f1",
     "packages": [
-        {
-            "name": "eloquent/composer-npm-bridge",
-            "version": "4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eloquent/composer-npm-bridge.git",
-                "reference": "1f035cc8d0698b918050b01585dc9d2b595d7b65"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/composer-npm-bridge/zipball/1f035cc8d0698b918050b01585dc9d2b595d7b65",
-                "reference": "1f035cc8d0698b918050b01585dc9d2b595d7b65",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1",
-                "php": ">=7"
-            },
-            "require-dev": {
-                "composer/composer": "dev-master",
-                "eloquent/phony-phpunit": "^2",
-                "errors/exceptions": "^0.2",
-                "phpunit/phpunit": "^6"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Eloquent\\Composer\\NpmBridge\\NpmBridgePlugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "Eloquent\\Composer\\NpmBridge\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Erin Millard",
-                    "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
-                }
-            ],
-            "description": "NPM integration for Composer packages.",
-            "homepage": "https://github.com/eloquent/composer-npm-bridge",
-            "keywords": [
-                "Bridge",
-                "composer",
-                "composer-plugin",
-                "integration",
-                "npm",
-                "package",
-                "plugin"
-            ],
-            "time": "2017-07-12T04:13:47+00:00"
-        },
         {
             "name": "phpfastcache/phpfastcache",
             "version": "6.0.4",

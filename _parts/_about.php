@@ -21,5 +21,10 @@
 					<li><span class='neutralitywtf-about-text-emphasis'>Straight-forward word replacement is inherently flawed.</span><br />When the dictionaries are defined, they search for words that are defined as the same "type" as the words on the parallel dictionary. However, some words are repeated in multiple types and the system can't recognize which to switch to.<br/>An example of this is the word 'her' that can be replaced with either 'him' ('talk to her' becomes 'talk to him') or with the word 'his' ('her house' becomes 'his house'). The system as it is built right now is plain; it looks for the word and conducts a plain, straightforward replacement, so the ambiguity can result in "him" and "his" appearing in error.</li>
 				</ul>
 				</p>
+				<h1>Contact</h1>
+				<p class='neutralitywtf-about-text-emphasis'>For questions and inquiries, please use<br/>contact [at] neutrality.wtf</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
 			</div>
 		</div>
