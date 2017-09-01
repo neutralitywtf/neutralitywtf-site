@@ -17,7 +17,7 @@ function safeGet( $getVar, $default = false ) {
 	return isset( $_GET[ $getVar ] ) ? $_GET[ $getVar ] : $default;
 }
 
-define( 'CACHE_VERSION', 0.1 );
+define( 'CACHE_VERSION', 0.2 );
 
 $error = false;
 $sessionID = session_id();
@@ -44,7 +44,8 @@ if ( $isMobile ) {
 	// when possible without breaking the behavior for sites that are
 	// known to fail on mobile view
 	$excludedFromMobile = [
-		'cnn.com'
+		'cnn.com',
+		'jpost.com'
 	];
 
 	$acceptMobile = true;
