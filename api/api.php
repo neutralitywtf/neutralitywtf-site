@@ -17,8 +17,9 @@ function safeGet( $getVar, $default = false ) {
 	return isset( $_GET[ $getVar ] ) ? $_GET[ $getVar ] : $default;
 }
 
-define( 'CACHE_VERSION', 0.9 );
+define( 'CACHE_VERSION', 0.1 );
 
+$error = false;
 $sessionID = session_id();
 
 $url = urldecode( html_entity_decode( filter_var( safeGet( 'url' ), FILTER_SANITIZE_STRING ) ) );
@@ -57,7 +58,18 @@ if ( $isMobile ) {
 	$isMobile = $acceptMobile;
 }
 
-if ( $url ) {
+// Make sure this request isn't requesting url inside neutrality.wtf
+// And specifically not a recursive call for api.php
+if (
+	ConceptReplacer\API::isInDomain( 'neutrality.wtf', $url ) ||
+	!$url
+) {
+	$error = true;
+}
+
+if ( $error ) {
+	echo 'ERROR: Bad request';
+} else {
 	phpFastCache\CacheManager::setDefaultConfig( [
 		'path' => dirname( __DIR__ ) . DIRECTORY_SEPARATOR . 'cache',
 	] );
@@ -83,7 +95,5 @@ if ( $url ) {
 	}
 
 	echo $resultsItem->get();
-} else {
-	echo 'ERROR: Bad request';
 }
 ?>
