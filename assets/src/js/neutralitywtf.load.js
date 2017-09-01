@@ -11,20 +11,23 @@ $( document ).ready( function () {
 	search.on( 'fetch', function ( url ) {
 		loader.start();
 
-		wtf.process.fetch( url )
-			.then( function ( data ) {
-				if ( data.substring( 0, 5 ) === 'ERROR' ) {
-					loader.reset();
-					search.setFailure( 'problemFetching' );
-					return;
-				}
-
+		wtf.process.fetch( url ).then(
+			function ( data, apiURL ) {
+				// Now that we know it's ready, we can load
+				// using the api url, since it will be cached
+				// And we src is more supported than srcdata
 				$display
-					.prop( 'srcdoc', data );
+					.prop( 'src', apiURL );
 
 				wtf.process.pushState( url );
 				loader.finish();
-			} );
+			},
+			// Failure
+			function () {
+				search.setFailure( 'problemFetching' );
+				loader.reset();
+			}
+		);
 	} );
 
 	// Change the logo to fit small screens

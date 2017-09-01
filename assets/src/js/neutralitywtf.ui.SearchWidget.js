@@ -12,7 +12,8 @@ wtf.ui.SearchWidget = function WtfUiSearchWidget ( $element, loader, config ) {
 	this.msgs = {
 		badUrl: '<strong>Can\'t do it!</strong> Please try again with a valid URL.',
 		problemFetching: '<strong>Oh noes!</strong>' +
-			' Couldn\'t load the site. Please try another URL, or try again later.'
+			' Couldn\'t display the content. There is an issue loading the site; this might be because of pay-wall or a full-page ad obscuring the content.<br />' +
+			' Please try another URL, or try again later.'
 	};
 
 	this.$info = this.$element.find( '.neutralitywtf-search-info' );
