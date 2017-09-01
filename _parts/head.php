@@ -6,6 +6,16 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
+		<!-- Social media !-->
+		<meta property="og:title" content="Neutrality.WTF" />
+		<meta property="og:image" content="https://www.neutrality.wtf/assets/images/neutralitywtf.jpg" />
+		<meta property="og:url" content="<?php
+echo 'https://www.neutrality.wtf/index.php';
+if ( $url ) {
+	echo '?url=' . urldecode( $url );
+}
+		?>" />
+
 		<title>Neutrality:WTF || Check the neutrality of text online</title>
 
 		<!-- Bootstrap core CSS -->
