@@ -19,10 +19,22 @@
 		white-space: nowrap;
 		font-size: 2em;
 
+		&:after {
+			content: '(Beta)';
+			position: relative;
+			margin: 0.3em;
+			/* transform: rotate(-45deg); */
+			font-size: 0.5em;
+			color: #ffc107;
+		}
+
 		@media (max-width: @page-width-small) {
 			white-space: normal;
 			text-align: center;
 			line-height: 1;
+			&::after {
+				display: block;
+			}
 		}
 	}
 
