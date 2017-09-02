@@ -3,7 +3,7 @@
 				<div class="neutralitywtf-search-info">
 					<p>When you read something online and you ask yourself</p>
 					<h1>What would it sound like if it was said about the opposite gender?</h1>
-					<p>Check what happens when you take a text and switch all gender terms around. Women become men, and men become women. Does it sound the same? Is the text neutral?</p>
+					<p>Check what happens when you take a text and switch all gender terms around. Women become men, and men become women. Does it sound right? Is the text neutral?</p>
 				</div>
 				<div class="neutralitywtf-search-alert">
 					<div class="alert alert-danger" role="alert">

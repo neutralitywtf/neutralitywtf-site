@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html prefix="og: http://ogp.me/ns#" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,14 +7,25 @@
 		<meta name="author" content="">
 
 		<!-- Social media !-->
+		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Neutrality.WTF" />
-		<meta property="og:image" content="https://www.neutrality.wtf/assets/images/neutralitywtf.jpg" />
+		<meta property="og:image" content="http://www.neutrality.wtf/assets/images/neutralitywtf.png" />
+		<meta property="og:image:secure_url" content="https://www.neutrality.wtf/assets/images/neutralitywtf.png" />
+		<meta property="og:description" content="Check what happens when you take a text and switch all gender terms around. Women become men, and men become women. Does it sound the same? Is the text neutral?" />
 		<meta property="og:url" content="<?php
 echo 'https://www.neutrality.wtf/index.php';
 if ( $url ) {
 	echo '?url=' . urldecode( $url );
 }
 		?>" />
+
+		<meta name="twitter:site" content="@neutralitywtf" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Neutrality.WTF" />
+		<meta name="twitter:description" content="Check what happens when you take a text and switch all gender terms around. Women become men, and men become women. Does it sound right? Is the text neutral?" />
+		<meta name="twitter:image" content="http://www.neutrality.wtf/assets/images/neutralitywtf.png" />
+
+		<!-- end OpenGraph social media definition -->
 
 		<title>Neutrality:WTF || Check the neutrality of text online</title>
 
@@ -39,7 +50,7 @@ if ( $url ) {
 		<div class="neutralitywtf-wrapper">
 			<div class="neutralitywtf-topbar neutralitywtf-table">
 				<div class="neutralitywtf-row">
-					<div class="neutralitywtf-topbar-logo neutralitywtf-cell"><a href="?">Neutrality:WTF</a></div>
+					<div class="neutralitywtf-topbar-logo neutralitywtf-cell"><a href="http://neutrality.wtf/">Neutrality:WTF</a></div>
 					<div class="neutralitywtf-topbar-middle neutralitywtf-cell">
 						<ul class="neutralitywtf-topbar-middle-menu">
 							<li><a id="view-original" target="_blank" href="<?php echo urldecode( $url ); ?>">[ View original ]</a></li>
