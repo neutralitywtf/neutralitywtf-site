@@ -45,6 +45,18 @@ wtf.process = {
 
 		return deferred.promise();
 	},
+	addStyles: function ( data ) {
+		// var $style = $( '<style>' )
+		// 		.attr( 'type', 'text/css' ),
+		// 	styles ='.conceptreplacer-replaced {' +
+		// 		'background-color: red;' +
+		// 		'}';
+
+		// return $( $.parseHTML( data ) ).contents().find( 'head' )
+		// 	.append(
+		// 		$style.append( styles )
+		// 	).html();
+	},
 	pushState: function ( url ) {
 		var params = {
 			url: $( '<span>' ).html( url ).text()

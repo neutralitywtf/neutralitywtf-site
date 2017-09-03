@@ -32,11 +32,12 @@ if ( $url ) {
 		<!-- Bootstrap core CSS -->
 		<link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
+		<!-- Magnific popup -->
+		<link rel="stylesheet" href="node_modules/magnific-popup/dist/magnific-popup.css">
+
 		<!-- Google fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
-		<!-- Loading animation from https://loading.io/animation/ -->
-		<!-- <link rel="stylesheet" type="text/css" href="assets/lib/loading.css"/> -->
 
 		<!-- Custom styles for this page -->
 		<link href="assets/neutrality.wtf.build.css" rel="stylesheet">
@@ -67,3 +68,11 @@ if ( $url ) {
 				</div>
 			</div>
 		</div>
+
+		<!-- Ambiguity popup -->
+			<div id="ambiguity-popup" class="white-popup mfp-hide neutralitywtf-popup">
+				<p>This word has been marked as <em><strong>"ambiguous"</strong></em>, which means that the original word has several options for replacements. The system can't tell which to choose, because it doesn't know context, which makes these ambiguous replacements often wrong.</p>
+				<p><small>An example of an ambiguous word is "her" being replaced either with "him" or "his" depending on context. Since the system has no understanding of context, the substitution may be wrong.</small></p>
+				<button title="Got it!" type="button" class="mfp-close">&#215;</button>
+			</div>
+		<!-- End ambiguity popup -->

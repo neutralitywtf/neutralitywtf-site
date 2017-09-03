@@ -61,6 +61,18 @@ wtf.process = {
 
 		return deferred.promise();
 	},
+	addStyles: function ( data ) {
+		// var $style = $( '<style>' )
+		// 		.attr( 'type', 'text/css' ),
+		// 	styles ='.conceptreplacer-replaced {' +
+		// 		'background-color: red;' +
+		// 		'}';
+
+		// return $( $.parseHTML( data ) ).contents().find( 'head' )
+		// 	.append(
+		// 		$style.append( styles )
+		// 	).html();
+	},
 	pushState: function ( url ) {
 		var params = {
 			url: $( '<span>' ).html( url ).text()
@@ -246,7 +258,31 @@ $( document ).ready( function () {
 				// using the api url, since it will be cached
 				// And we src is more supported than srcdata
 				$display
-					.prop( 'src', apiURL );
+					.prop( 'src', apiURL )
+					.on( 'load', function () {
+						var $ambiguous = $( this ).contents().find( '.conceptreplacer-ambiguous' );
+						// Define a popup for ambiguous words inside the iframe
+						$ambiguous
+							.append(
+								$( '<span>' )
+									.text( '*' )
+									// This is inside the iFrame, so we need to
+									// specifically state it here rather than in a CSS page
+									.css( {
+										size: '0.8em',
+										color: '#e28089'
+									} )
+							)
+							.magnificPopup( {
+								items: {
+									type: 'inline',
+									closeBtnInside: true,
+									closeOnContentClick: true,
+									showCloseBtn: true,
+									src: $( '#ambiguity-popup' )
+								}
+							} );
+					} );
 
 				wtf.process.pushState( url );
 				loader.finish();

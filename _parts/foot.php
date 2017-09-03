@@ -9,6 +9,7 @@
 		<script src="vendor/twbs/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 
 		<script src="node_modules/oojs/dist/oojs.jquery.min.js"></script>
+		<script src="node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
 		<script src="assets/neutrality.wtf.build.js"></script>
 	</body>
 </html>
