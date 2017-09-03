@@ -69,7 +69,7 @@ wtf.ui.SearchWidget.prototype.setValue = function ( url ) {
  * @return {boolean} URL is valid
  */
 wtf.ui.SearchWidget.prototype.isValid = function ( url ) {
-	var pattern = /^(http|https)?:\/\/[a-zA-Z0-9-\.]+\.[a-z]{2,4}/;
+	var pattern = /^(http:\/\/|https:\/\/)?[a-zA-Z0-9-\.]+\.[a-z]{2,4}/;
 
 	return pattern.test( url );
 };
@@ -84,6 +84,15 @@ wtf.ui.SearchWidget.prototype.submit = function () {
 
 	if ( this.isValid( url ) ) {
 		this.$alert.hide();
+
+		if (
+			url.substring( 0, 8 ) !== 'https://' &&
+			url.substring( 0, 7 ) !== 'http://'
+		) {
+			// Add http:// to the beginning
+			url = 'http://' + url;
+		}
+
 		this.emit( 'fetch', url );
 	} else {
 		this.setFailure( 'badUrl' );
