@@ -3,8 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
+		<meta name="description" content="Check what happens when you take a text and switch all gender terms around. Women become men, and men become women. Does it sound the same? Is the text neutral?">
 		<meta name="author" content="">
+
+		<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+		<link rel="shortcut icon" type="image/png" href="http://www.neutrality.wtf/favicon.ico"/>
 
 		<!-- Social media !-->
 		<meta property="og:type" content="website" />
