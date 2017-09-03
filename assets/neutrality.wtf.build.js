@@ -264,15 +264,18 @@ $( document ).ready( function () {
 						// Define a popup for ambiguous words inside the iframe
 						$ambiguous
 							.append(
-								$( '<span>' )
-									.text( '*' )
+								$( '<sup>' )
+									.text( '?' )
 									// This is inside the iFrame, so we need to
 									// specifically state it here rather than in a CSS page
 									.css( {
-										size: '0.8em',
-										color: '#e28089'
+										color: '#dc3545',
+										'font-weight': 'bold'
 									} )
 							)
+							.css( {
+								cursor: 'pointer'
+							} )
 							.magnificPopup( {
 								items: {
 									type: 'inline',
@@ -282,10 +285,11 @@ $( document ).ready( function () {
 									src: $( '#ambiguity-popup' )
 								}
 							} );
+
+						loader.finish();
 					} );
 
 				wtf.process.pushState( url );
-				loader.finish();
 			},
 			// Failure
 			function () {
