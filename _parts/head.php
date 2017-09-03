@@ -6,8 +6,8 @@
 		<meta name="description" content="Check what happens when you take a text and switch all gender terms around. Women become men, and men become women. Does it sound the same? Is the text neutral?">
 		<meta name="author" content="">
 
-		<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
-		<link rel="shortcut icon" type="image/png" href="http://www.neutrality.wtf/favicon.ico"/>
+		<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+		<link rel="shortcut icon" type="image/png" href="http://www.neutrality.wtf/favicon.png"/>
 
 		<!-- Social media !-->
 		<meta property="og:type" content="website" />
