@@ -21,7 +21,7 @@
 
 				<div class="neutralitywtf-spinner"><div class="neutralitywtf-spinner-image"></div></div>
 				<div class="neutralitywtf-search-disclaimer">
-					<p><span class='neutralitywtf-emphasis'>... but note: Text depends on context. Not everything that sound weird is sexist, and not everything that is sexist sounds weird.</span><br /><small class='neutralitywtf-about-text-logo'>This tool should be a conversation starter. Not a discussion-ending hammer. Context matters.</small></p>
+					<p><span class='neutralitywtf-emphasis'>... but note: Text depends on context. Not everything that sounds weird is sexist, and not everything that is sexist sounds weird.</span><br /><small class='neutralitywtf-about-text-logo'>This tool should be a conversation starter. Not a discussion-ending hammer. Context matters.</small></p>
 				</div>
 				<div class="neutralitywtf-search-examples">
 					<h1>Examples</h1>
