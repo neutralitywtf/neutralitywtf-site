@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2em;
 }
 
 p {
@@ -55,6 +55,18 @@ a {
 
 		@media (max-width: @page-width-medium) {
 			width: 100%;
+		}
+	}
+
+	&-emphasis {
+		font-weight: bold;
+		font-size: 1.2em;
+		color: #ffc107;
+
+		p& {
+			text-align: center;
+			border-top: 1px solid #ffc107;
+			border-bottom: 1px solid #ffc107;
 		}
 	}
 

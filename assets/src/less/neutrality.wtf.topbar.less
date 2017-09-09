@@ -34,6 +34,8 @@
 		}
 
 		@media (max-width: @page-width-small) {
+			background-size: 25px;
+			padding-left: 25px;
 			white-space: normal;
 			text-align: center;
 			line-height: 1;
@@ -104,11 +106,13 @@
 			font-size: 0.8em;
 			&:not(:first-child) {
 				margin-left: 2em;
-
 			}
 
 			@media (max-width: @page-width-small) {
 				font-size: 1.5em;
+				&:not(:first-child) {
+					margin-left: 0;
+				}
 			}
 		}
 	}
