@@ -28,18 +28,31 @@
 					<ul>
 	<?php
 	$examples = [
-		'https://en.wikipedia.org/wiki/Ada_Lovelace' => 'Ada Lovelace (Wikipedia)',
-		'http://www.wikihow.com/Treat-Girls-and-Women' => 'How to Treat Girls and Women (WikiHow)',
-		'http://www.nytimes.com/2013/03/31/science/space/yvonne-brill-rocket-scientist-dies-at-88.html' => 'Yvonne Brill, a Pioneering Rocket Scientist, Dies at 88 (NYTimes)',
-		'http://money.cnn.com/2017/08/21/news/economy/girls-who-code-saujani/index.html' => 'Girls Who Code founder: Men build technologies to \'replace their mothers\' (CNN)'
+		'https://en.wikipedia.org/wiki/Ada_Lovelace' => [
+			'title' => 'Ada Lovelace (Wikipedia)',
+		],
+		'http://www.wikihow.com/Treat-Girls-and-Women' => [
+			'title' => 'How to Treat Girls and Women (WikiHow)'
+		],
+		'http://www.nytimes.com/2013/03/31/science/space/yvonne-brill-rocket-scientist-dies-at-88.html' => [
+			'title' => 'Yvonne Brill, a Pioneering Rocket Scientist, Dies at 88 (NYTimes)',
+		],
+		'http://money.cnn.com/2017/08/21/news/economy/girls-who-code-saujani/index.html' => [
+			'title' => 'Girls Who Code founder: Men build technologies to \'replace their mothers\' (CNN)',
+			'hideFromMobile' => true,
+		],
 	];
 
-	foreach ( $examples as $exampleUrl => $exampleText ) {
-		echo '<li>' .
+	foreach ( $examples as $exampleUrl => $details ) {
+		echo '<li';
+			if ( isset( $details[ 'hideFromMobile' ] ) && $details[ 'hideFromMobile' ] ) {
+				echo ' class="neutralitywtf-search-examples-hideMobile"';
+			}
+		echo '>' .
 			'<a' .
 				' href="?url=' . $exampleUrl . '"' .
 				' data-url="' . $exampleUrl . '"' .
-			'">' . $exampleText . '</a>' .
+			'">' . $details['title'] . '</a>' .
 		'</li>';
 	}
 	?>
