@@ -56,16 +56,17 @@ if ( $url ) {
 				<div class="neutralitywtf-row">
 					<div class="neutralitywtf-topbar-logo neutralitywtf-cell"><a href="http://neutrality.wtf/">Neutrality:WTF</a></div>
 					<div class="neutralitywtf-topbar-middle neutralitywtf-cell">
+						<div class="neutralitywtf-topbar-middle-share sharethis-inline-share-buttons"></div>
 						<ul class="neutralitywtf-topbar-middle-menu">
 							<li><a id="view-original" target="_blank" href="<?php echo urldecode( $url ); ?>">[ View original ]</a></li>
 							<li><a id="try-again" href="?">[ Try another ]</a></li>
 						</ul>
 					</div>
 					<div class="neutralitywtf-topbar-menu neutralitywtf-cell">
-						<ul>
+						<div class="neutralitywtf-topbar-menu-icon"></div>
+						<ul class="neutralitywtf-topbar-menu-group">
 							<li class="neutralitywtf-topbar-menu-item-main <?php echo $page === 'main' ? 'neutralitywtf-topbar-menu-active' : '' ?>"><a href="index.php">Main</a></li>
 							<li class="neutralitywtf-topbar-menu-item-about <?php echo $page === 'about' ? 'neutralitywtf-topbar-menu-active' : '' ?>"><a href="about.php">About</a></li>
-							<hr />
 						</ul>
 					</div>
 				</div>

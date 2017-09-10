@@ -11,5 +11,8 @@
 		<script src="node_modules/oojs/dist/oojs.jquery.min.js"></script>
 		<script src="node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
 		<script src="assets/neutrality.wtf.build.js"></script>
+
+		<!-- ShareThis -->
+		<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59b5a9d0cd8c7e0012a725dc&product=social-ab' async='async'></script>
 	</body>
 </html>
