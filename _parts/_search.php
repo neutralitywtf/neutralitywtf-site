@@ -3,7 +3,7 @@
 				<div class="neutralitywtf-search-info">
 					<p>When you read something online and you ask yourself</p>
 					<h1>What would it sound like if it was said about the opposite gender?</h1>
-					<p>Get insight about the neutrality of online pages by switching the gender terms around:</p>
+					<p>Get insight about the neutrality of online pages.<br />Type a valid URL below, and the system will show it to you with gender terms switched around:</p>
 				</div>
 				<div class="neutralitywtf-search-alert">
 					<div class="alert alert-danger" role="alert">
@@ -12,7 +12,7 @@
 				</div>
 				<div class="neutralitywtf-search-input">
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="http://" aria-label="Search for..." id="targetUrl" <?php if ( $url ) { echo 'disabled="disabled" value="' . urldecode( $url ) . '"'; } ?>>
+						<input type="text" class="form-control" placeholder="Type a URL..." aria-label="Search for..." id="targetUrl" <?php if ( $url ) { echo 'disabled="disabled" value="' . urldecode( $url ) . '"'; } ?>>
 						<span class="input-group-btn">
 							<button class="btn btn-danger" type="button" id="actionButton" <?php if ( $url ) { echo 'disabled="disabled"'; } ?>>Switch it up!</button>
 						</span>
