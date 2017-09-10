@@ -58,6 +58,11 @@
 	?>
 					</ul>
 				</div>
+				<div class="neutralitywtf-search-bookmarklet">
+					<h1>Bookmarklet</h1>
+					<p>If you want to add a button that will automatically send websites to <span class='neutralitywtf-about-text-logo'>neutrality.wtf</span>, drag this box to your bookmarks bar: <a href="javascript: (function () {var jsCode = document.createElement('script');jsCode.setAttribute('src', 'http://www.neutrality.wtf/assets/neutrality.wtf.bookmarklet.js');document.body.appendChild(jsCode);}());">Send to Neutrality.WTF</a>
+					</p>
+				</div>
 			</div>
 		</div>
 
