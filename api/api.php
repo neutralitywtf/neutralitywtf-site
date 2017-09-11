@@ -17,7 +17,7 @@ function safeGet( $getVar, $default = false ) {
 	return isset( $_GET[ $getVar ] ) ? $_GET[ $getVar ] : $default;
 }
 
-define( 'CACHE_VERSION', 0.2 );
+define( 'CACHE_VERSION', 0.3 );
 
 $error = false;
 $sessionID = session_id();
