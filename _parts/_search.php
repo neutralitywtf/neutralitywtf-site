@@ -1,9 +1,8 @@
 		<div class="neutralitywtf-wrapper">
 			<div class="neutralitywtf-search">
 				<div class="neutralitywtf-search-info">
-					<p>When you read something online and you ask yourself</p>
-					<h1>What would it sound like if it was said about the opposite gender?</h1>
-					<p>Get insight about the neutrality of online pages.<br />Type a valid URL below, and the system will show it to you with gender terms switched around:</p>
+					<h1>Can we examine the neutrality of gendered language online?</h1>
+					<p>Get some insight about the neutrality of online pages by typing a valid URL below, and the system will show it to you with binary gender terms switched around:</p>
 				</div>
 				<div class="neutralitywtf-search-alert">
 					<div class="alert alert-danger" role="alert">
@@ -21,7 +20,11 @@
 
 				<div class="neutralitywtf-spinner"><div class="neutralitywtf-spinner-image"></div></div>
 				<div class="neutralitywtf-search-disclaimer">
-					<p><span class='neutralitywtf-emphasis'>... but note: Text depends on context. Not everything that sounds weird is sexist, and not everything that is sexist sounds weird.</span><br /><small class='neutralitywtf-about-text-logo'>This tool should be a conversation starter. Not a discussion-ending hammer. Context matters.</small></p>
+                    <h2>NOTE<small class="neutralitywtf-search-disclaimer-readmore"><a href="about.php">[ Read more ]</a></small></h2>
+                    <p><span class='neutralitywtf-emphasis'>But actually... Gender isn't binary.</span><br />
+                        <small class='neutralitywtf-about-text-logo neutralitywtf-search-disclaimer-text'>There are more than two genders, and gender neutral pronouns are entirely valid. This exercise is meant to flip on its head gendered language specifically, and not to undermine those that exist beyond the binary.</small></p>
+                    <p><span class='neutralitywtf-emphasis'>And... Text depends on context.</span><br />
+                        <small class='neutralitywtf-about-text-logo neutralitywtf-search-disclaimer-text'>This tool should be a conversation starter. Not a discussion-ending hammer. Context matters.</small></p>
 				</div>
 				<div class="neutralitywtf-search-examples">
 					<h1>Examples</h1>

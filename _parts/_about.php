@@ -9,7 +9,10 @@
 				<h2>This site exists to make us notice</h2>
 				<p><span class='neutralitywtf-about-text-logo'>Neutrality:WTF</span> exists to demonstrate what happens to our language online when we switch genders around. Is there a clear difference between how we relate to men versus how we talk about women? Do we notice when we fall into pitfalls that encourage one gender at the expense of another? Can we even see when an article we think is 'complimentary' is actually anything but?</p>
 				<p class='neutralitywtf-emphasis'><span class='neutralitywtf-about-text-logo'>Neutrality:WTF</span> challenges you to try and notice.</p>
-				<h2>Context matters</h2>
+                <h2>Gender isn't binary</h2>
+                <p>Gender is not a binary, it's a spectrum. The purpose of <span class='neutralitywtf-about-text-logo'>Neutrality:WTF</span> is not to undermine that. We respect and acknowledge that there are more than two genders, and that gender neutral pronouns are entirely valid. We do not intend to undermine those that exist beyond the binary.<br/>
+                    The purpose of the tool is merely to flip language that is already gendered, on its head, to examine a very specific impact of how we think of <strong>gendered roles</strong> in our society.</p>
+                <h2>Context matters</h2>
 				<p>While the test of switching terminology around can expose biases, it is really not supposed to stand on its own. Text alone, lacking context, is proof of nothing.</p>
 				<p class='neutralitywtf-emphasis'>More than anything, <span class='neutralitywtf-about-text-logo'>Neutrality:WTF</span> should be a conversation starter. Not a discussion ending hammer. Context matters.</p>
 

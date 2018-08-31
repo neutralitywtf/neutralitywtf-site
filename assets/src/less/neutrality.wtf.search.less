@@ -38,7 +38,32 @@
 	}
 
 	&-disclaimer {
-		margin: 1.5em 0;
+		h2 {
+			margin-top: -1em;
+			font-size: 1.2em;
+			font-weight: bolder;
+			color: #ffc107;
+		}
+
+		p {
+			@media (max-width: @page-width-small) {
+				font-size: 1.5em;
+			}
+		}
+
+		&-readmore {
+			margin-left: 0.5em;
+
+			a {
+				color: #96b8ff;
+			}
+		}
+		&-text {
+			display: block;
+			margin-top: -0.5em;
+		}
+
+		margin: 2em 0;
 		border-top: 1px solid #ffc107;
 		border-bottom: 1px solid #ffc107;
 	}
