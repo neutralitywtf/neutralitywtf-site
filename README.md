@@ -1,5 +1,7 @@
 # neutralitywtf-site
 
+## This repository is archived. See [the new repo](https://github.com/neutralitywtf/website)
+
 Neutrality:WTF exists to demonstrate what happens to our language online when we switch genders around. Is there a clear difference between how we relate to men versus how we talk about women? Do we notice when we fall into pitfalls that encourage one gender at the expense of another? Can we even see when an article we think is 'complimentary' is actually anything but?
 
 # Development
